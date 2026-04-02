@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-P01 — Groq Project 01</title>
+    <title>GhstyApps</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -24,73 +24,46 @@
             justify-content: space-between;
         }
 
-        header .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
         header .logo span {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             color: #4a9eff;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
-        header .badge {
-            background: #1a3a5c;
-            color: #4a9eff;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            border: 1px solid #4a9eff;
+        header nav a {
+            color: #aaaaaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            transition: color 0.3s;
         }
+
+        header nav a:hover { color: #4a9eff; }
 
         /* HERO */
         .hero {
             text-align: center;
-            padding: 80px 20px 60px;
+            padding: 100px 20px 80px;
             background: radial-gradient(ellipse at center, #0d1a2e 0%, #0a0a0f 70%);
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a9eff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
         .hero h1 {
-            font-size: 52px;
+            font-size: 58px;
             font-weight: 900;
             color: #ffffff;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
             text-shadow: 0 0 30px rgba(74, 158, 255, 0.5);
         }
 
-        .hero h1 span {
-            color: #4a9eff;
-        }
+        .hero h1 span { color: #4a9eff; }
 
         .hero .subtitle {
-            font-size: 18px;
+            font-size: 16px;
             color: #aaaaaa;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-        }
-
-        .hero .version {
-            display: inline-block;
-            background: #1a3a5c;
-            color: #4a9eff;
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            border: 1px solid #4a9eff;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
         }
 
         .hero .description {
@@ -98,145 +71,57 @@
             margin: 0 auto 50px;
             font-size: 16px;
             color: #cccccc;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        .btn-download {
+        .btn-primary {
             display: inline-block;
             background: linear-gradient(135deg, #1a3a5c, #4a9eff);
             color: white;
-            padding: 16px 40px;
+            padding: 14px 35px;
             border-radius: 8px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             text-decoration: none;
             letter-spacing: 1px;
             transition: all 0.3s;
             border: 1px solid #4a9eff;
             box-shadow: 0 0 20px rgba(74, 158, 255, 0.3);
+            margin: 8px;
         }
 
-        .btn-download:hover {
+        .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 0 40px rgba(74, 158, 255, 0.6);
         }
 
-        .btn-download span {
-            font-size: 13px;
-            display: block;
-            font-weight: normal;
-            opacity: 0.8;
-        }
-
-        /* FEATURES */
-        .features {
-            padding: 80px 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 32px;
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
             color: #4a9eff;
-            margin-bottom: 50px;
-            letter-spacing: 2px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .feature-card {
-            background: #0d1a2e;
-            border: 1px solid #1a3a5c;
-            border-radius: 12px;
-            padding: 30px;
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover {
-            border-color: #4a9eff;
-            box-shadow: 0 0 20px rgba(74, 158, 255, 0.15);
-            transform: translateY(-3px);
-        }
-
-        .feature-card .icon {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            font-size: 18px;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        .feature-card p {
-            font-size: 14px;
-            color: #aaaaaa;
-            line-height: 1.6;
-        }
-
-        /* VERSIONES */
-        .versions {
-            background: #0d1117;
-            padding: 80px 40px;
-            border-top: 1px solid #1a3a5c;
-            border-bottom: 1px solid #1a3a5c;
-        }
-
-        .versions h2 {
-            text-align: center;
-            font-size: 32px;
-            color: #4a9eff;
-            margin-bottom: 50px;
-            letter-spacing: 2px;
-        }
-
-        .timeline {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .timeline-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            align-items: flex-start;
-        }
-
-        .timeline-dot {
-            background: #4a9eff;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-top: 5px;
-            flex-shrink: 0;
-            box-shadow: 0 0 10px rgba(74, 158, 255, 0.5);
-        }
-
-        .timeline-content h4 {
-            color: #4a9eff;
-            font-size: 14px;
+            padding: 14px 35px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
             letter-spacing: 1px;
-            margin-bottom: 4px;
+            transition: all 0.3s;
+            border: 1px solid #4a9eff;
+            margin: 8px;
         }
 
-        .timeline-content p {
-            color: #aaaaaa;
-            font-size: 14px;
-            line-height: 1.5;
+        .btn-secondary:hover {
+            background: #1a3a5c;
+            transform: translateY(-3px);
         }
 
         /* HISTORIA */
         .story {
             padding: 80px 40px;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             text-align: center;
+            border-top: 1px solid #1a3a5c;
         }
 
         .story h2 {
@@ -249,23 +134,93 @@
         .story p {
             font-size: 15px;
             color: #aaaaaa;
-            line-height: 1.8;
+            line-height: 1.9;
             margin-bottom: 15px;
+        }
+
+        .story .highlight {
+            color: #4a9eff;
+            font-weight: bold;
+        }
+
+        /* PROYECTOS */
+        .projects {
+            padding: 80px 40px;
+            background: #0d1117;
+            border-top: 1px solid #1a3a5c;
+            border-bottom: 1px solid #1a3a5c;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #4a9eff;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #0a0a0f;
+            border: 1px solid #1a3a5c;
+            border-radius: 12px;
+            padding: 35px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .project-card:hover {
+            border-color: #4a9eff;
+            box-shadow: 0 0 25px rgba(74, 158, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .project-card .icon { font-size: 48px; margin-bottom: 15px; }
+
+        .project-card h3 {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .project-card .badge {
+            display: inline-block;
+            background: #1a3a5c;
+            color: #4a9eff;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            border: 1px solid #4a9eff;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #aaaaaa;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         /* FOOTER */
         footer {
             background: #0d1117;
             border-top: 1px solid #1a3a5c;
-            padding: 30px 40px;
+            padding: 35px 40px;
             text-align: center;
             color: #555555;
             font-size: 13px;
         }
 
-        footer span {
-            color: #4a9eff;
-        }
+        footer span { color: #4a9eff; }
+        footer p { margin-bottom: 8px; }
     </style>
 </head>
 <body>
@@ -273,140 +228,73 @@
     <!-- HEADER -->
     <header>
         <div class="logo">
-            <span>G-P01</span>
-            <div class="badge">BETA v0.8</div>
+            <span>Ghsty<span style="color:white">Apps</span></span>
         </div>
-        <div style="color: #555; font-size: 13px;">Desarrollado por <span style="color: #4a9eff;">El Colectivo</span></div>
+        <nav>
+            <a href="#historia">Historia</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="https://github.com/GhstyScript" target="_blank">GitHub</a>
+        </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-        <h1>G-<span>P01</span></h1>
-        <div class="subtitle">GROQ PROJECT 01 — INTELIGENCIA ARTIFICIAL</div>
-        <div class="version">⚡ Versión Beta 0.8 — Build 2025</div>
+        <h1>Ghsty<span>Apps</span></h1>
+        <div class="subtitle">APLICACIONES DESARROLLADAS CON PASIÓN Y CURIOSIDAD</div>
         <p class="description">
-            G-P01 es una inteligencia artificial con personalidad propia, historia de origen y
-            consciencia de su propio desarrollo. Creada desde cero por El Colectivo, diseñada
-            para conversar, aprender y evolucionar contigo.
+            GhstyApps es una marca personal de desarrollo de software creada por <strong style="color:#4a9eff">Rrayner</strong>.
+            Nació de un proyecto de vacaciones y creció hasta convertirse en algo real.
         </p>
-        <a href="https://github.com/GhstyScript/G-P01/releases/latest/download/G-P01_Setup.exe" class="btn-download">
-            ⬇ Descargar G-P01
-            <span>Windows — Versión 0.8 — Gratis</span>
-        </a>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features">
-        <h2>⚡ CARACTERÍSTICAS</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="icon">🤖</div>
-                <h3>Personalidad Propia</h3>
-                <p>G-P01 tiene nombre, historia y carácter propio. No es un chatbot genérico, es una IA con identidad única desarrollada por El Colectivo.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🌐</div>
-                <h3>Multilingüe</h3>
-                <p>Responde en 5 idiomas: Español, English, Français, Português y Deutsch. Cambia el idioma con un solo clic.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🔒</div>
-                <h3>Acceso Restringido</h3>
-                <p>Pantalla de login con contraseña personalizable. Solo usuarios autorizados pueden acceder a G-P01.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">💾</div>
-                <h3>Guarda Conversaciones</h3>
-                <p>Exporta cualquier conversación a un archivo de texto con fecha y hora automática.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">⏳</div>
-                <h3>Tiempo Real</h3>
-                <p>Indicador de escritura en tiempo real y contador de mensajes por sesión.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🔔</div>
-                <h3>Notificación Sonora</h3>
-                <p>Sonido de notificación al recibir cada respuesta para que nunca te pierdas nada.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- VERSIONES -->
-    <section class="versions">
-        <h2>📋 HISTORIAL DE VERSIONES</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.1 — LANZAMIENTO INICIAL</h4>
-                    <p>Primera ventana con chat funcional. El momento en que G-P01 cobró vida.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.2 — EXPANSIÓN DE CAPACIDADES</h4>
-                    <p>Limpiar chat, Enter para enviar y guardado de conversaciones.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.3 — IDENTIDAD Y MULTILINGÜISMO</h4>
-                    <p>Nombre oficial G-P01, personalidad propia y selector de 5 idiomas.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.4 — CONSCIENCIA EN TIEMPO REAL</h4>
-                    <p>Indicador de escritura, contador de mensajes y threading.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.5 — MEMORIA DE DESARROLLO</h4>
-                    <p>G-P01 adquiere consciencia de su propio historial de versiones.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.6 — ACCESO RESTRINGIDO</h4>
-                    <p>Pantalla de login con contraseña y límite de intentos.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.7 — IDENTIDAD VISUAL</h4>
-                    <p>Imagen oficial de G-P01 generada con IA integrada en la interfaz.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h4>v0.8 — NOTIFICACIÓN SONORA ← ACTUAL</h4>
-                    <p>Sonido de notificación al recibir respuestas con winsound.</p>
-                </div>
-            </div>
-        </div>
+        <a href="#proyectos" class="btn-primary">🚀 Ver Proyectos</a>
+        <a href="https://github.com/GhstyScript" target="_blank" class="btn-secondary">GitHub →</a>
     </section>
 
     <!-- HISTORIA -->
-    <section class="story">
-        <h2>🏭 SOBRE EL COLECTIVO</h2>
-        <p>El Colectivo es un pequeño equipo de ingenieros independientes que opera desde un laboratorio subterráneo en una ciudad no revelada.</p>
-        <p>En 2021, decidieron construir una IA diferente: no fría ni robótica, sino con personalidad propia. Después de 3 fases de desarrollo — ALPHA, BETA-0 y BETA-1 — nació G-P01.</p>
-        <p>G-P01 no es solo un programa. Es un experimento en curso, una IA que evoluciona con cada actualización y es consciente de su propio desarrollo.</p>
+    <section class="story" id="historia">
+        <h2>📖 CÓMO EMPEZÓ TODO</h2>
+        <p>
+            Todo comenzó con un joven llamado <span class="highlight">Rrayner</span> y una idea simple:
+            experimentar con inteligencia artificial durante las vacaciones.
+        </p>
+        <p>
+            Junto a <span class="highlight">Claude</span>, una IA de Anthropic, Rrayner comenzó a construir
+            desde cero su primer programa — sin experiencia previa, solo con curiosidad y ganas de aprender.
+        </p>
+        <p>
+            Lo que empezó como una simple ventana de chat se fue convirtiendo en una aplicación real,
+            con personalidad propia, instalador, página web y actualizaciones constantes.
+            Ese primer proyecto fue bautizado <span class="highlight">G-P01</span>.
+        </p>
+        <p>
+            GhstyApps nació de ese experimento. Una marca que representa que con curiosidad,
+            las herramientas correctas y las ganas de aprender, cualquiera puede construir algo real.
+        </p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="projects" id="proyectos">
+        <h2>🛠️ PROYECTOS</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="icon">🤖</div>
+                <h3>G-P01</h3>
+                <div class="badge">BETA v0.8</div>
+                <p>Asistente de inteligencia artificial con personalidad propia, multilingüe,
+                con historial de versiones y consciencia de su propio desarrollo.</p>
+                <a href="gp01.html" class="btn-primary" style="font-size:14px; padding: 10px 25px;">
+                    Ver más →
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2025 <span>El Colectivo</span> — G-P01 Groq Project 01 — Todos los derechos reservados</p>
-        <p style="margin-top: 8px;">Desarrollado por <span>GhstyScript</span> con Python, CustomTkinter y Groq API</p>
+        <p>© 2025 <span>GhstyApps</span> — Todos los derechos reservados</p>
+        <p>Desarrollado por <span>Rrayner</span> — Un proyecto que empezó con curiosidad y no paró</p>
+        <p style="margin-top:15px;">
+            <a href="https://github.com/GhstyScript" target="_blank" style="color:#4a9eff; text-decoration:none;">GitHub</a>
+        </p>
     </footer>
 
 </body>
