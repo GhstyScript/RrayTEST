@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-P01 — GhstyApps</title>
+    <title>Ghsty Assistant — GhstyApps</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -23,12 +23,15 @@
             justify-content: space-between;
         }
 
-        header .logo span {
+        header .logo a {
+            text-decoration: none;
             font-size: 24px;
             font-weight: bold;
             color: #4a9eff;
             letter-spacing: 3px;
         }
+
+        header .logo a span { color: white; }
 
         header nav a {
             color: #aaaaaa;
@@ -76,7 +79,7 @@
         }
 
         .hero .description {
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto 50px;
             font-size: 16px;
             color: #cccccc;
@@ -120,7 +123,7 @@
         }
 
         .btn-secondary:hover {
-            background: #1a3a5c;
+            background: #1a1a3e;
             transform: translateY(-3px);
         }
 
@@ -204,7 +207,13 @@
             box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
         }
 
-        .timeline-content h4 { color: #4a9eff; font-size: 14px; letter-spacing: 1px; margin-bottom: 4px; }
+        .timeline-content h4 {
+            color: #4a9eff;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
         .timeline-content h4.current { color: #00ff88; }
         .timeline-content p { color: #aaaaaa; font-size: 14px; line-height: 1.5; }
 
@@ -244,9 +253,7 @@
     <!-- HEADER -->
     <header>
         <div class="logo">
-            <a href="index.html" style="text-decoration:none;">
-                <span>Ghsty<span style="color:white">Apps</span></span>
-            </a>
+            <a href="index.html">Ghsty<span>Apps</span></a>
         </div>
         <nav>
             <a href="index.html">Inicio</a>
@@ -258,16 +265,17 @@
 
     <!-- HERO -->
     <section class="hero">
-        <h1>G-<span>P01</span></h1>
-        <div class="subtitle">GROQ PROJECT 01 — INTELIGENCIA ARTIFICIAL</div>
-        <div class="version">⚡ Versión Beta 0.8 — Build 2025</div>
+        <h1>Ghsty <span>Assistant</span></h1>
+        <div class="subtitle">INTELIGENCIA ARTIFICIAL — BY GHSTYAPPS</div>
+        <div class="version">⚡ Versión 1.0 — Major Release 2025</div>
         <p class="description">
-            G-P01 es una inteligencia artificial con personalidad propia, historia de origen
-            y consciencia de su propio desarrollo. El primer proyecto de GhstyApps,
-            construido desde cero por Rrayner junto a Claude.
+            Ghsty Assistant es una inteligencia artificial con personalidad propia
+            desarrollada por GhstyApps. Con sistema de usuarios, roles, seguridad avanzada
+            y memoria de conversaciones. El primer gran proyecto de Rrayner, construido
+            desde cero junto a Claude.
         </p>
         <a href="https://github.com/GhstyScript/RrayTEST/releases/latest" target="_blank" class="btn-primary">
-            ⬇ Descargar G-P01
+            ⬇ Descargar Ghsty Assistant
         </a>
         <a href="https://github.com/GhstyScript/RrayTEST/releases" target="_blank" class="btn-secondary">
             Ver todos los Releases →
@@ -281,7 +289,7 @@
             <div class="feature-card">
                 <div class="icon">🤖</div>
                 <h3>Personalidad Propia</h3>
-                <p>G-P01 tiene nombre, historia y carácter propio. No es un chatbot genérico, es una IA con identidad única.</p>
+                <p>Ghsty Assistant tiene identidad única desarrollada por GhstyApps. No es un chatbot genérico.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🌐</div>
@@ -289,19 +297,34 @@
                 <p>Responde en 5 idiomas: Español, English, Français, Português y Deutsch.</p>
             </div>
             <div class="feature-card">
+                <div class="icon">👥</div>
+                <h3>Sistema de Usuarios</h3>
+                <p>Registro e inicio de sesión con contraseñas encriptadas. Roles de Admin y Usuario.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">👑</div>
+                <h3>Panel de Administración</h3>
+                <p>Control total de usuarios, bloqueos, sanciones, anuncios y historial de conversaciones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🧠</div>
+                <h3>Memoria de Conversaciones</h3>
+                <p>Ghsty Assistant recuerda conversaciones anteriores de cada usuario.</p>
+            </div>
+            <div class="feature-card">
                 <div class="icon">🔒</div>
-                <h3>Acceso Restringido</h3>
-                <p>Pantalla de login con contraseña. Solo usuarios autorizados pueden acceder.</p>
+                <h3>Seguridad Avanzada</h3>
+                <p>Sistema de detección de actividad sospechosa con alertas en tiempo real para el admin.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎨</div>
+                <h3>Nueva Interfaz</h3>
+                <p>Diseño moderno con PyQt6, barra lateral, animaciones y estilo oscuro profesional.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">💾</div>
                 <h3>Guarda Conversaciones</h3>
                 <p>Exporta cualquier conversación a un archivo de texto con fecha y hora automática.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">⏳</div>
-                <h3>Tiempo Real</h3>
-                <p>Indicador de escritura en tiempo real y contador de mensajes por sesión.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🔔</div>
@@ -319,7 +342,7 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <h4>v0.1 — LANZAMIENTO INICIAL</h4>
-                    <p>Primera ventana con chat funcional. El momento en que G-P01 cobró vida.</p>
+                    <p>Primera ventana con chat funcional. El momento en que todo comenzó.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -333,7 +356,7 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <h4>v0.3 — IDENTIDAD Y MULTILINGÜISMO</h4>
-                    <p>Nombre oficial G-P01, personalidad propia y selector de 5 idiomas.</p>
+                    <p>Nombre G-P01, personalidad propia y selector de 5 idiomas.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -347,7 +370,7 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <h4>v0.5 — MEMORIA DE DESARROLLO</h4>
-                    <p>G-P01 adquiere consciencia de su propio historial de versiones.</p>
+                    <p>La IA adquiere consciencia de su propio historial de versiones.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -361,14 +384,28 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <h4>v0.7 — IDENTIDAD VISUAL</h4>
-                    <p>Imagen oficial de G-P01 generada con IA integrada en la interfaz.</p>
+                    <p>Imagen oficial generada con IA integrada en la interfaz.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>v0.8 — NOTIFICACIÓN SONORA</h4>
+                    <p>Sonido de notificación al recibir respuestas.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>v0.9 — SISTEMA DE USUARIOS</h4>
+                    <p>Base de datos SQLite, roles Admin y Usuario, contraseñas encriptadas con bcrypt.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot current"></div>
                 <div class="timeline-content">
-                    <h4 class="current">v0.8 — NOTIFICACIÓN SONORA ← ACTUAL</h4>
-                    <p>Sonido de notificación al recibir respuestas con winsound.</p>
+                    <h4 class="current">v1.0 — MAJOR RELEASE ← ACTUAL</h4>
+                    <p>Renombrado a Ghsty Assistant. Nueva interfaz PyQt6 con barra lateral, panel admin completo con bloqueos, sanciones, anuncios, historial de chats y sistema de seguridad.</p>
                 </div>
             </div>
         </div>
@@ -377,8 +414,9 @@
     <!-- DESCARGA -->
     <section class="download-section">
         <h2>⬇ DESCARGAR</h2>
-        <p>Disponible gratuitamente para Windows. Descarga el instalador y tendrás G-P01 listo en minutos.</p>
-        <a href="https://github.com/GhstyScript/RrayTEST/releases/latest" target="_blank" class="btn-primary" style="font-size:18px; padding: 16px 45px;">
+        <p>Disponible gratuitamente para Windows. Descarga el instalador y tendrás Ghsty Assistant listo en minutos.</p>
+        <a href="https://github.com/GhstyScript/RrayTEST/releases/latest" target="_blank"
+           class="btn-primary" style="font-size:18px; padding: 16px 45px;">
             ⬇ Descargar última versión
         </a>
         <br><br>
@@ -392,8 +430,11 @@
         <p>© 2025 <span>GhstyApps</span> — Todos los derechos reservados</p>
         <p>Desarrollado por <span>Rrayner</span> — Un proyecto que empezó con curiosidad y no paró</p>
         <p style="margin-top:15px;">
-            <a href="index.html" style="color:#4a9eff; text-decoration:none; margin-right:20px;">← Volver a GhstyApps</a>
-            <a href="https://github.com/GhstyScript" target="_blank" style="color:#4a9eff; text-decoration:none;">GitHub</a>
+            <a href="index.html" style="color:#4a9eff; text-decoration:none; margin-right:20px;">
+                ← Volver a GhstyApps
+            </a>
+            <a href="https://github.com/GhstyScript" target="_blank"
+               style="color:#4a9eff; text-decoration:none;">GitHub</a>
         </p>
     </footer>
 
