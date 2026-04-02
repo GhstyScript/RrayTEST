@@ -1,2 +1,2 @@
-# RrayTEST
-OFFICIAL RrayTEST dowload page
+# GhstyApps
+Oficial GhstyApps Github page
