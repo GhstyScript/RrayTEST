@@ -6,15 +6,12 @@
     <title>GhstyApps</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             background-color: #0a0a0f;
             color: #e0e0e0;
             font-family: 'Segoe UI', sans-serif;
             overflow-x: hidden;
         }
-
-        /* HEADER */
         header {
             background: linear-gradient(135deg, #0a0a0f 0%, #0d1a2e 100%);
             border-bottom: 1px solid #1a3a5c;
@@ -23,14 +20,12 @@
             align-items: center;
             justify-content: space-between;
         }
-
         header .logo span {
             font-size: 24px;
             font-weight: bold;
             color: #4a9eff;
             letter-spacing: 3px;
         }
-
         header nav a {
             color: #aaaaaa;
             text-decoration: none;
@@ -38,16 +33,12 @@
             font-size: 14px;
             transition: color 0.3s;
         }
-
         header nav a:hover { color: #4a9eff; }
-
-        /* HERO */
         .hero {
             text-align: center;
             padding: 100px 20px 80px;
             background: radial-gradient(ellipse at center, #0d1a2e 0%, #0a0a0f 70%);
         }
-
         .hero h1 {
             font-size: 58px;
             font-weight: 900;
@@ -56,16 +47,13 @@
             margin-bottom: 15px;
             text-shadow: 0 0 30px rgba(74, 158, 255, 0.5);
         }
-
         .hero h1 span { color: #4a9eff; }
-
         .hero .subtitle {
             font-size: 16px;
             color: #aaaaaa;
             margin-bottom: 20px;
             letter-spacing: 3px;
         }
-
         .hero .description {
             max-width: 600px;
             margin: 0 auto 50px;
@@ -73,7 +61,6 @@
             color: #cccccc;
             line-height: 1.8;
         }
-
         .btn-primary {
             display: inline-block;
             background: linear-gradient(135deg, #1a3a5c, #4a9eff);
@@ -89,12 +76,10 @@
             box-shadow: 0 0 20px rgba(74, 158, 255, 0.3);
             margin: 8px;
         }
-
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 0 40px rgba(74, 158, 255, 0.6);
         }
-
         .btn-secondary {
             display: inline-block;
             background: transparent;
@@ -109,13 +94,10 @@
             border: 1px solid #4a9eff;
             margin: 8px;
         }
-
         .btn-secondary:hover {
-            background: #1a3a5c;
+            background: #1a1a3e;
             transform: translateY(-3px);
         }
-
-        /* HISTORIA */
         .story {
             padding: 80px 40px;
             max-width: 850px;
@@ -123,34 +105,25 @@
             text-align: center;
             border-top: 1px solid #1a3a5c;
         }
-
         .story h2 {
             font-size: 32px;
             color: #4a9eff;
             margin-bottom: 30px;
             letter-spacing: 2px;
         }
-
         .story p {
             font-size: 15px;
             color: #aaaaaa;
             line-height: 1.9;
             margin-bottom: 15px;
         }
-
-        .story .highlight {
-            color: #4a9eff;
-            font-weight: bold;
-        }
-
-        /* PROYECTOS */
+        .story .highlight { color: #4a9eff; font-weight: bold; }
         .projects {
             padding: 80px 40px;
             background: #0d1117;
             border-top: 1px solid #1a3a5c;
             border-bottom: 1px solid #1a3a5c;
         }
-
         .projects h2 {
             text-align: center;
             font-size: 32px;
@@ -158,15 +131,13 @@
             margin-bottom: 50px;
             letter-spacing: 2px;
         }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
-
         .project-card {
             background: #0a0a0f;
             border: 1px solid #1a3a5c;
@@ -175,22 +146,18 @@
             transition: all 0.3s;
             text-align: center;
         }
-
         .project-card:hover {
             border-color: #4a9eff;
             box-shadow: 0 0 25px rgba(74, 158, 255, 0.15);
             transform: translateY(-5px);
         }
-
         .project-card .icon { font-size: 48px; margin-bottom: 15px; }
-
         .project-card h3 {
             font-size: 22px;
             color: #ffffff;
             margin-bottom: 8px;
             letter-spacing: 2px;
         }
-
         .project-card .badge {
             display: inline-block;
             background: #1a3a5c;
@@ -201,15 +168,22 @@
             border: 1px solid #4a9eff;
             margin-bottom: 15px;
         }
-
+        .project-card .badge-green {
+            display: inline-block;
+            background: #003322;
+            color: #00cc66;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            border: 1px solid #00cc66;
+            margin-bottom: 15px;
+        }
         .project-card p {
             font-size: 14px;
             color: #aaaaaa;
             line-height: 1.6;
             margin-bottom: 20px;
         }
-
-        /* FOOTER */
         footer {
             background: #0d1117;
             border-top: 1px solid #1a3a5c;
@@ -218,14 +192,12 @@
             color: #555555;
             font-size: 13px;
         }
-
         footer span { color: #4a9eff; }
         footer p { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
     <header>
         <div class="logo">
             <span>Ghsty<span style="color:white">Apps</span></span>
@@ -237,19 +209,18 @@
         </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
         <h1>Ghsty<span>Apps</span></h1>
         <div class="subtitle">APLICACIONES DESARROLLADAS CON PASIÓN Y CURIOSIDAD</div>
         <p class="description">
-            GhstyApps es una marca personal de desarrollo de software creada por <strong style="color:#4a9eff">Rrayner</strong>.
+            GhstyApps es una marca personal de desarrollo de software creada por
+            <strong style="color:#4a9eff">Rrayner</strong>.
             Nació de un proyecto de vacaciones y creció hasta convertirse en algo real.
         </p>
         <a href="#proyectos" class="btn-primary">🚀 Ver Proyectos</a>
         <a href="https://github.com/GhstyScript" target="_blank" class="btn-secondary">GitHub →</a>
     </section>
 
-    <!-- HISTORIA -->
     <section class="story" id="historia">
         <h2>📖 CÓMO EMPEZÓ TODO</h2>
         <p>
@@ -262,8 +233,8 @@
         </p>
         <p>
             Lo que empezó como una simple ventana de chat se fue convirtiendo en una aplicación real,
-            con personalidad propia, instalador, página web y actualizaciones constantes.
-            Ese primer proyecto fue bautizado <span class="highlight">G-P01</span>.
+            con personalidad propia, sistema de usuarios, instalador y página web.
+            Ese primer proyecto fue bautizado <span class="highlight">Ghsty Assistant</span>.
         </p>
         <p>
             GhstyApps nació de ese experimento. Una marca que representa que con curiosidad,
@@ -271,29 +242,52 @@
         </p>
     </section>
 
-    <!-- PROYECTOS -->
     <section class="projects" id="proyectos">
         <h2>🛠️ PROYECTOS</h2>
         <div class="projects-grid">
+
             <div class="project-card">
                 <div class="icon">🤖</div>
-                <h3>G-P01</h3>
-                <div class="badge">BETA v0.8</div>
-                <p>Asistente de inteligencia artificial con personalidad propia, multilingüe,
-                con historial de versiones y consciencia de su propio desarrollo.</p>
-                <a href="gp01.html" class="btn-primary" style="font-size:14px; padding: 10px 25px;">
+                <h3>Ghsty Assistant</h3>
+                <div class="badge">v1.0</div>
+                <p>Asistente de inteligencia artificial con personalidad propia, sistema de usuarios,
+                roles, seguridad avanzada y memoria de conversaciones.</p>
+                <a href="ghsty-assistant.html" class="btn-primary" style="font-size:14px; padding: 10px 25px;">
                     Ver más →
                 </a>
             </div>
+
+            <div class="project-card">
+                <div class="icon">🚀</div>
+                <h3>GhstyApps Launcher</h3>
+                <div class="badge">v1.0</div>
+                <p>Launcher central para gestionar e instalar todas las aplicaciones de GhstyApps
+                desde un solo lugar. Estilo moderno inspirado en launchers profesionales.</p>
+                <a href="launcher.html" class="btn-primary" style="font-size:14px; padding: 10px 25px;">
+                    Ver más →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <div class="icon">⚡</div>
+                <h3>Ghsty Script</h3>
+                <div class="badge-green">Próximamente</div>
+                <p>Herramienta de automatización y scripts con AutoHotkey integrado.
+                Crea macros, automatiza tareas y mejora tu productividad.</p>
+                <a href="#" class="btn-secondary" style="font-size:14px; padding: 10px 25px;">
+                    Próximamente →
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>© 2025 <span>GhstyApps</span> — Todos los derechos reservados</p>
         <p>Desarrollado por <span>Rrayner</span> — Un proyecto que empezó con curiosidad y no paró</p>
         <p style="margin-top:15px;">
-            <a href="https://github.com/GhstyScript" target="_blank" style="color:#4a9eff; text-decoration:none;">GitHub</a>
+            <a href="https://github.com/GhstyScript" target="_blank"
+               style="color:#4a9eff; text-decoration:none;">GitHub</a>
         </p>
     </footer>
 
