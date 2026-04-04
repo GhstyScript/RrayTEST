@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhstyApps Launcher — GhstyApps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0a0a0f;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #0a0a0f 0%, #0d1a2e 100%);
+            border-bottom: 1px solid #1a3a5c;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header .logo a {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a9eff;
+            letter-spacing: 3px;
+        }
+        header .logo a span { color: white; }
+        header nav a {
+            color: #aaaaaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        header nav a:hover { color: #4a9eff; }
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: radial-gradient(ellipse at center, #0d1a2e 0%, #0a0a0f 70%);
+        }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(74, 158, 255, 0.5);
+        }
+        .hero h1 span { color: #4a9eff; }
+        .hero .subtitle {
+            font-size: 15px;
+            color: #aaaaaa;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+        .hero .version {
+            display: inline-block;
+            background: #1a3a5c;
+            color: #4a9eff;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            border: 1px solid #4a9eff;
+            margin-bottom: 40px;
+        }
+        .hero .description {
+            max-width: 620px;
+            margin: 0 auto 50px;
+            font-size: 16px;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a3a5c, #4a9eff);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid #4a9eff;
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.3);
+            margin: 8px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 40px rgba(74, 158, 255, 0.6);
+        }
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #4a9eff;
+            padding: 14px 35px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid #4a9eff;
+            margin: 8px;
+        }
+        .btn-secondary:hover {
+            background: #1a1a3e;
+            transform: translateY(-3px);
+        }
+        .features {
+            padding: 80px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #4a9eff;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .feature-card {
+            background: #0d1a2e;
+            border: 1px solid #1a3a5c;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+        .feature-card:hover {
+            border-color: #4a9eff;
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.15);
+            transform: translateY(-3px);
+        }
+        .feature-card .icon { font-size: 36px; margin-bottom: 15px; }
+        .feature-card h3 { font-size: 18px; color: #ffffff; margin-bottom: 10px; }
+        .feature-card p { font-size: 14px; color: #aaaaaa; line-height: 1.6; }
+        .apps-section {
+            background: #0d1117;
+            padding: 80px 40px;
+            border-top: 1px solid #1a3a5c;
+            border-bottom: 1px solid #1a3a5c;
+        }
+        .apps-section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #4a9eff;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .app-card {
+            background: #0a0a0f;
+            border: 1px solid #1a3a5c;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .app-card:hover {
+            border-color: #4a9eff;
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.15);
+            transform: translateY(-3px);
+        }
+        .app-card .icon { font-size: 42px; margin-bottom: 12px; }
+        .app-card h3 { font-size: 18px; color: #ffffff; margin-bottom: 8px; }
+        .app-card .badge {
+            display: inline-block;
+            background: #1a3a5c;
+            color: #4a9eff;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            border: 1px solid #4a9eff;
+            margin-bottom: 12px;
+        }
+        .app-card .badge-soon {
+            display: inline-block;
+            background: #003322;
+            color: #00cc66;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            border: 1px solid #00cc66;
+            margin-bottom: 12px;
+        }
+        .app-card p { font-size: 13px; color: #aaaaaa; line-height: 1.6; }
+        .download-section {
+            padding: 80px 40px;
+            text-align: center;
+        }
+        .download-section h2 {
+            font-size: 32px;
+            color: #4a9eff;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .download-section p {
+            color: #aaaaaa;
+            margin-bottom: 35px;
+            font-size: 15px;
+        }
+        footer {
+            background: #0d1117;
+            border-top: 1px solid #1a3a5c;
+            padding: 35px 40px;
+            text-align: center;
+            color: #555555;
+            font-size: 13px;
+        }
+        footer span { color: #4a9eff; }
+        footer p { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">Ghsty<span>Apps</span></a>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#caracteristicas">Características</a>
+            <a href="#apps">Apps disponibles</a>
+            <a href="https://github.com/GhstyScript/GhstyApps/releases" target="_blank">Releases</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>GhstyApps <span>Launcher</span></h1>
+        <div class="subtitle">EL HUB CENTRAL DE TODAS TUS APPS GHSTYAPPS</div>
+        <div class="version">⚡ Versión 1.0 — 2025</div>
+        <p class="description">
+            GhstyApps Launcher es el punto de entrada a todas las aplicaciones de GhstyApps.
+            Instala, actualiza y lanza tus apps desde un solo lugar con una interfaz moderna
+            inspirada en los mejores launchers del mercado.
+        </p>
+        <a href="https://github.com/GhstyScript/GhstyApps/releases/latest" target="_blank" class="btn-primary">
+            ⬇ Descargar Launcher
+        </a>
+        <a href="https://github.com/GhstyScript/GhstyApps/releases" target="_blank" class="btn-secondary">
+            Ver todos los Releases →
+        </a>
+    </section>
+
+    <section class="features" id="caracteristicas">
+        <h2>⚡ CARACTERÍSTICAS</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🚀</div>
+                <h3>Lanzador Central</h3>
+                <p>Accede a todas tus apps de GhstyApps desde un solo lugar sin necesidad de buscarlas en tu escritorio.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⬇</div>
+                <h3>Instalación Automática</h3>
+                <p>Descarga e instala cualquier app de GhstyApps con un solo clic directamente desde GitHub.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔄</div>
+                <h3>Actualizaciones</h3>
+                <p>Mantén todas tus apps actualizadas a la última versión sin complicaciones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎨</div>
+                <h3>Interfaz Moderna</h3>
+                <p>Diseño oscuro y profesional con barra lateral, animaciones y estilo inspirado en launchers como el de Minecraft.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📦</div>
+                <h3>Gestión de Apps</h3>
+                <p>Instala y desinstala aplicaciones fácilmente manteniendo tu sistema organizado.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔒</div>
+                <h3>Acceso Controlado</h3>
+                <p>Las apps solo son ejecutables desde el launcher, manteniendo todo organizado y seguro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="apps-section" id="apps">
+        <h2>📦 APPS DISPONIBLES</h2>
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="icon">🤖</div>
+                <h3>Ghsty Assistant</h3>
+                <div class="badge">v1.0 Disponible</div>
+                <p>Inteligencia artificial con personalidad propia, sistema de usuarios y seguridad avanzada.</p>
+            </div>
+            <div class="app-card">
+                <div class="icon">⚡</div>
+                <h3>Ghsty Script</h3>
+                <div class="badge-soon">Próximamente</div>
+                <p>Herramienta de automatización y scripts con AutoHotkey integrado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section">
+        <h2>⬇ DESCARGAR</h2>
+        <p>Disponible gratuitamente para Windows. Instala el launcher y accede a todo el ecosistema GhstyApps.</p>
+        <a href="https://github.com/GhstyScript/GhstyApps/releases/latest" target="_blank"
+           class="btn-primary" style="font-size:18px; padding: 16px 45px;">
+            ⬇ Descargar GhstyApps Launcher
+        </a>
+        <br><br>
+        <a href="https://github.com/GhstyScript/GhstyApps/releases" target="_blank" class="btn-secondary">
+            Ver todos los Releases →
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2025 <span>GhstyApps</span> — Todos los derechos reservados</p>
+        <p>Desarrollado por <span>Rrayner</span> — Un proyecto que empezó con curiosidad y no paró</p>
+        <p style="margin-top:15px;">
+            <a href="index.html" style="color:#4a9eff; text-decoration:none; margin-right:20px;">
+                ← Volver a GhstyApps
+            </a>
+            <a href="https://github.com/GhstyScript" target="_blank"
+               style="color:#4a9eff; text-decoration:none;">GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>
